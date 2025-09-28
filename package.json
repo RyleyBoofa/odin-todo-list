@@ -1,5 +1,5 @@
 {
-  "name": "web-project-template",
+  "name": "odin-todo-list",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {

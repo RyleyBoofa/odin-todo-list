@@ -1,3 +1,8 @@
+// Individual todo list item
+// data object with getters and setters
+
+import { validateString, validateNumber, validateBoolean } from "./validate.js";
+
 export class TodoItem {
     #title;
     #description;
@@ -18,11 +23,9 @@ export class TodoItem {
     }
 
     set title(value) {
-        if (typeof value !== "string" || value === "") {
-            console.warn("Invalid title");
-            return;
+        if (validateString(`${this.#title} new title`, value)) {
+            this.#title = value;
         }
-        this.#title = value;
     }
 
     get description() {
@@ -30,11 +33,9 @@ export class TodoItem {
     }
 
     set description(value) {
-        if (typeof value !== "string" || value === "") {
-            console.warn("Invalid description");
-            return;
+        if (validateString(`${this.#title} new description`, value)) {
+            this.#title = value;
         }
-        this.#description = value;
     }
 
     get dueDate() {
@@ -42,11 +43,9 @@ export class TodoItem {
     }
 
     set dueDate(value) {
-        if (typeof value !== "string" || value === "") {
-            console.warn("Invalid due date");
-            return;
+        if (validateString(`${this.#title} new due date`, value)) {
+            this.#title = value;
         }
-        this.#dueDate = value;
     }
 
     get priority() {
@@ -54,11 +53,9 @@ export class TodoItem {
     }
 
     set priority(value) {
-        if (typeof value !== "number" || value < 1 || value > 3) {
-            console.warn("Invalid priority");
-            return;
+        if (validateNumber(`${this.#title} new priority`, value)) {
+            this.#title = value;
         }
-        this.#priority = value;
     }
 
     get completed() {
@@ -66,6 +63,8 @@ export class TodoItem {
     }
 
     set completed(value) {
-        this.#completed = value;
+        if (validateBoolean(`${this.title} new completed`, value)) {
+            this.#completed = value;
+        }
     }
 }

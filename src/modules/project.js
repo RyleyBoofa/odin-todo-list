@@ -1,6 +1,3 @@
-// Todo list project
-// data object with getters, setters, and methods to add/remove items
-
 import { validateString } from "./validate.js";
 
 export class Project {

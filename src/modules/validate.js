@@ -1,6 +1,3 @@
-// Validator module
-// exported functions for validating various data-types
-
 export function validateString(name, value, minLength = 1) {
     if (typeof value !== "string" || value.length < minLength) {
         console.warn(

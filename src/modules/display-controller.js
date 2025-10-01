@@ -7,17 +7,15 @@ export class DisplayController {
     static #refresh = document.querySelector("#refresh");
 
     static init() {
-        this.#refresh.addEventListener("click", this.render.bind(this));
+        this.#refresh.addEventListener("click", this.#render.bind(this));
     }
 
-    static render() {
-        this.renderTasks();
-        this.renderProjects();
+    static #render() {
+        this.#renderTasks();
+        this.#renderProjects();
     }
 
-    static renderTasks() {
-        TaskManager.logTasks();
-
+    static #renderTasks() {
         const tasks = TaskManager.getAllTasks();
 
         tasks.forEach((task) => {
@@ -41,9 +39,7 @@ export class DisplayController {
         });
     }
 
-    static renderProjects() {
-        ProjectManager.logProjects();
-
+    static #renderProjects() {
         const projects = ProjectManager.getAllProjects();
 
         for (const [_, project] of Object.entries(projects)) {

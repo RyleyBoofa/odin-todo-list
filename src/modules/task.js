@@ -1,6 +1,3 @@
-// Individual todo list item
-// data object with getters and setters
-
 import { validateString, validateNumber, validateBoolean } from "./validate.js";
 
 export class Task {

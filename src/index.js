@@ -1,8 +1,9 @@
-import { ItemManager, ProjectManager } from "./modules/manager.js";
+import { TaskManager } from "./modules/task-manager.js";
+import { ProjectManager } from "./modules/project-manager.js";
 
 import "./styles.css";
 
 console.log("Hello, World!");
 
-window.ItemManager = ItemManager;
+window.TaskManager = TaskManager;
 window.ProjectManager = ProjectManager;

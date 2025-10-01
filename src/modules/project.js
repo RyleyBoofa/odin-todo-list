@@ -6,12 +6,12 @@ import { validateString } from "./validate.js";
 export class Project {
     #name;
     #description;
-    #items;
+    tasks;
 
     constructor(name, description) {
         this.#name = name;
         this.#description = description;
-        this.#items = [];
+        this.tasks = [];
     }
 
     get name() {
@@ -34,15 +34,15 @@ export class Project {
         }
     }
 
-    get items() {
-        return this.#items;
+    get tasks() {
+        return this.tasks;
     }
 
-    addItem(item) {
-        this.#items.push(item);
+    addTask(task) {
+        this.tasks.push(task);
     }
 
-    removeItem(item) {
-        this.#items = this.#items.filter((i) => i !== item);
+    removeTask(task) {
+        this.tasks = this.tasks.filter((item) => item !== task);
     }
 }

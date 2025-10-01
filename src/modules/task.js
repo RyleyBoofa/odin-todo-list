@@ -3,28 +3,28 @@
 
 import { validateString, validateNumber, validateBoolean } from "./validate.js";
 
-export class TodoItem {
-    #title;
+export class Task {
+    #name;
     #description;
     #dueDate;
     #priority;
     #completed;
 
-    constructor(title, description, dueDate, priority) {
-        this.#title = title;
+    constructor(name, description, dueDate, priority) {
+        this.#name = name;
         this.#description = description;
         this.#dueDate = dueDate;
         this.#priority = priority;
         this.#completed = false;
     }
 
-    get title() {
-        return this.#title;
+    get name() {
+        return this.#name;
     }
 
-    set title(value) {
-        if (validateString(`${this.#title} new title`, value)) {
-            this.#title = value;
+    set name(value) {
+        if (validateString(`${this.#name} new name`, value)) {
+            this.#name = value;
         }
     }
 
@@ -33,8 +33,8 @@ export class TodoItem {
     }
 
     set description(value) {
-        if (validateString(`${this.#title} new description`, value)) {
-            this.#title = value;
+        if (validateString(`${this.#name} new description`, value)) {
+            this.#name = value;
         }
     }
 
@@ -43,8 +43,8 @@ export class TodoItem {
     }
 
     set dueDate(value) {
-        if (validateString(`${this.#title} new due date`, value)) {
-            this.#title = value;
+        if (validateString(`${this.#name} new due date`, value)) {
+            this.#name = value;
         }
     }
 
@@ -53,8 +53,8 @@ export class TodoItem {
     }
 
     set priority(value) {
-        if (validateNumber(`${this.#title} new priority`, value)) {
-            this.#title = value;
+        if (validateNumber(`${this.#name} new priority`, value)) {
+            this.#name = value;
         }
     }
 
@@ -63,7 +63,7 @@ export class TodoItem {
     }
 
     set completed(value) {
-        if (validateBoolean(`${this.title} new completed`, value)) {
+        if (validateBoolean(`${this.name} new completed`, value)) {
             this.#completed = value;
         }
     }

@@ -9,10 +9,51 @@
 body {
     font-size: 20px;
     background-color: lightgrey;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2em;
 }
 
-h1,
-p {
-    text-align: center;
-    margin: 1em auto;
+.container {
+    flex: 1;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.projects {
+    background-color: purple;
+    margin: 1em;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.project {
+    background-color: aqua;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tasks {
+    background-color: orange;
+    margin: 1em;
+    padding: 1em;
+    display: grid;
+    gap: 1em;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.task {
+    background-color: greenyellow;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
 }

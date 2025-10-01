@@ -4,6 +4,10 @@ import { Task } from "./task.js";
 export class TaskManager {
     static #tasks = [];
 
+    static getAllTasks() {
+        return this.#tasks;
+    }
+
     static createTask(name, description, dueDate, priority) {
         if (
             !validateString("new task name", name) ||

@@ -4,6 +4,10 @@ import { Project } from "./project.js";
 export class ProjectManager {
     static #projects = {};
 
+    static getAllProjects() {
+        return this.#projects;
+    }
+
     static createProject(name, description) {
         if (
             !validateString("new project name", name) ||

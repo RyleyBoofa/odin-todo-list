@@ -2,7 +2,9 @@ import { validateString } from "./validate.js";
 import { Project } from "./project.js";
 
 export class ProjectManager {
-    static #projects = {};
+    static #projects = {
+        Default: new Project("Default", "All tasks"),
+    };
 
     static getAllProjects() {
         return this.#projects;

@@ -79,3 +79,19 @@ li {
     background-color: goldenrod;
     padding: 1em;
 }
+
+#new-project,
+#new-task {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.new-item-buttons {
+    display: flex;
+    gap: 1em;
+}
+
+.new-item-buttons > button {
+    flex: 1;
+}

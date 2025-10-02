@@ -2,7 +2,7 @@ import { validateString, validateNumber } from "./validate.js";
 import { Task } from "./task.js";
 
 export class TaskManager {
-    static #tasks = [];
+    static #tasks = [new Task("Sample task", "This is a sample task", "02/10/25", 1)];
 
     static getAllTasks() {
         return this.#tasks;

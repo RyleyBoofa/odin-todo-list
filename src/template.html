@@ -6,21 +6,48 @@
         <title>Odin Todo List</title>
     </head>
     <body>
-        <header>
-            <button type="button" id="refresh">Refresh</button>
-        </header>
-        <div class="container">
-            <div class="projects">
-                <div class="project">
-                    <h1>Default</h1>
-                </div>
-            </div>
-            <div class="tasks">
-                <div class="task">
-                    <h2>Dishes</h2>
-                    <p>Do the dishes</p>
-                </div>
-            </div>
-        </div>
+        <main class="main">
+            <section class="section projects-section">
+                <header class="header projects-header">
+                    <h2 class="section-heading">Projects</h2>
+                    <button type="button" id="new-project">+</button>
+                    <form action="#" class="sort-form">
+                        <label for="project-sort">Sort order:</label>
+                        <select name="project-sort" id="project-sort">
+                            <option value="default">Default</option>
+                            <option value="alphabetical">Alphabetical</option>
+                            <option value="count">Task count</option>
+                        </select>
+                    </form>
+                </header>
+                <ul class="list projects-list">
+                    <li class="list-item project-list-item" id="default-project">
+                        <h3>Default</h3>
+                        <p>All tasks</p>
+                    </li>
+                </ul>
+            </section>
+            <section class="section tasks-section">
+                <header class="header tasks-header">
+                    <h2 class="section-heading">Tasks</h2>
+                    <button type="button" id="new-task">+</button>
+                    <form action="#" class="sort-form">
+                        <label for="task-sort">Sort order:</label>
+                        <select name="task-sort" id="task-sort">
+                            <option value="default">Default</option>
+                            <option value="alphabetical">Alphabetical</option>
+                            <option value="due-date">Due Date</option>
+                            <option value="priority">Priority</option>
+                        </select>
+                    </form>
+                </header>
+                <ul class="list tasks-list">
+                    <li class="list-item task-list-item" id="sample-task">
+                        <h3>Sample task</h3>
+                        <p>This is a sample task</p>
+                    </li>
+                </ul>
+            </section>
+        </main>
     </body>
 </html>
